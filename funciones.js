@@ -4,6 +4,7 @@ let ingresos;
 let egresos;
 let valorDisponible;
 
+
 function calcularDisponible(ingresos, egresos){
     valorDisponible = Math.round((ingresos - egresos)*100) / 100 ;
 
@@ -14,3 +15,8 @@ function calcularDisponible(ingresos, egresos){
         return valorDisponible;
 }
 
+function calcularCapacidadPago(montoDisponible){
+
+    return montoDisponible * 0.50;
+
+}

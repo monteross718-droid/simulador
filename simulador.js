@@ -8,4 +8,8 @@ let  egresos = parseFloat(document.getElementById("txtEgresos").value);
 let valorDisponible = calcularDisponible(ingresos, egresos);
 document.getElementById("lblDisponibleValor").innerText = valorDisponible;
 
+let capacidadPago = calcularCapacidadPago(valorDisponible);
+document.getElementById("lblCapacidadValor").innerText = capacidadPago;
+
+
 }
