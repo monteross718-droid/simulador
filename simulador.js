@@ -24,5 +24,12 @@ document.getElementById("lblTotalValor").innerText = TotalPagar;
 let valorCuotaMes = calcularCuotaMensual(TotalPagar, plazoAnios);
 document.getElementById("lblCuotaValor").innerText = valorCuotaMes.toFixed(2);
 
+let estadoCredito = aprobarCredito(capacidadPago,valorCuotaMes);
 
+if(estadoCredito == true) {
+    document.getElementById("spnEstadoCredito").innerText = "CREDITO APROBADO";
+    }    else   {
+    document.getElementById("spnEstadoCredito").innerText = "CREDITO RECHAZADO";
+    }
+       
 }

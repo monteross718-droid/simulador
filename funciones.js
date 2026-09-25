@@ -7,6 +7,7 @@ let valorInteres;
 let TotalPagar;
 let valorCuotaMes;
 let meses;
+let estadoCredito;
 
 function calcularDisponible(ingresos, egresos){
     valorDisponible = Math.round((ingresos - egresos)*100) / 100 ;
@@ -40,4 +41,15 @@ function calcularCuotaMensual(TotalPagar, plazoAnios){
     meses = plazoAnios *12;
     return valorCuotaMes= TotalPagar / meses; 
 
+}
+
+function aprobarCredito(capacidadPago,valorCuotaMes){
+    
+
+    if(capacidadPago > valorCuotaMes) {
+         return true; 
+    }    else   {
+        return false;
+    }
+       
 }
