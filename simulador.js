@@ -12,14 +12,17 @@ let capacidadPago = calcularCapacidadPago(valorDisponible);
 document.getElementById("lblCapacidadValor").innerText = capacidadPago;
 
 let  monto = parseInt(document.getElementById("txtMonto").value);
-let  tasa = parseInt(document.getElementById("txtPlazo").value);
-let  plazoAnios = parseInt(document.getElementById("txtTasaInteres").value);
+let  tasa = parseInt(document.getElementById("txtTasaInteres").value);
+let  plazoAnios = parseInt(document.getElementById("txtPlazo").value);
 
 let valorInteres = calcularInteresSimple(monto,tasa,plazoAnios);
 document.getElementById("lblInteresValor").innerText = valorInteres;
 
 let TotalPagar = calcularTotalPagar(monto, valorInteres);
 document.getElementById("lblTotalValor").innerText = TotalPagar;
+
+let valorCuotaMes = calcularCuotaMensual(TotalPagar, plazoAnios);
+document.getElementById("lblCuotaValor").innerText = valorCuotaMes.toFixed(2);
 
 
 }

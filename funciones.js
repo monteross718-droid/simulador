@@ -5,6 +5,8 @@ let egresos;
 let valorDisponible;
 let valorInteres;
 let TotalPagar;
+let valorCuotaMes;
+let meses;
 
 function calcularDisponible(ingresos, egresos){
     valorDisponible = Math.round((ingresos - egresos)*100) / 100 ;
@@ -31,4 +33,11 @@ function calcularInteresSimple(monto,tasa,plazoAnios){
 function calcularTotalPagar(monto, valorInteres){
     
     return TotalPagar = monto + valorInteres + 100;
+}
+
+function calcularCuotaMensual(TotalPagar, plazoAnios){
+
+    meses = plazoAnios *12;
+    return valorCuotaMes= TotalPagar / meses; 
+
 }
