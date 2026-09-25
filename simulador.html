@@ -9,40 +9,103 @@
     <script src="simulador.js"></script>
 </head>
 <body>
-
     <div class="container">
-        <h1>Simulador de Crédito</h1>
+        <header class="brand">
+            <img
+                src="https://www.produbanco.com.ec/media/gejhsois/logo-produbanco-152x42.png"
+                alt="Produbanco Grupo Promerica"
+                width="152"
+                height="42"
+            >
+            <span>SIMULADOR DE CRÉDITO</span>
+        </header>
 
-        <h2>Datos financieros</h2>
-        <label for="txtIngresos">Ingresos:</label>
-        <input type="text" id="txtIngresos">
-
-        <label for="txtEgresos">Egresos:</label>
-        <input type="text" id="txtEgresos">
-
-        <p>Disponible: <span id="lblDisponibleValor"></span></p>
-        <p>Capacidad de pago mensual: <span id="lblCapacidadValor"></span></p>
-
-        <h2>Solicitud de crédito</h2>
-        <label for="txtMonto">Monto:</label>
-        <input type="text" id="txtMonto">
-
-        <label for="txtPlazo">Plazo en años:</label>
-        <input type="text" id="txtPlazo">
-
-        <label for="txtTasaInteres">Tasa de interés:</label>
-        <input type="text" id="txtTasaInteres">
-
-        <p>Interés a pagar: <span id="lblInteresValor"></span></p>
-        <p>Total préstamo: <span id="lblTotalValor"></span></p>
-        <p>Cuota mensual: <span id="lblCuotaValor"></span></p>
-        <p>Estado de crédito: <span id="spnEstadoCredito">ANALIZANDO...</span></p>
-
-        <div class="buttons">
-            <button onclick="calcular()">Calcular Crédito</button>
-            <button  id="btnReiniciar">Reiniciar</button>
+        <div class="hero">
+            <span class="eyebrow">SOLUCIONES PARA TUS PLANES</span>
+            <h1>Tu próximo proyecto<br><em>comienza aquí.</em></h1>
+            <p>Explora tu capacidad de pago y simula tu crédito.</p>
         </div>
-    </div>
 
+        <main class="layout">
+            <div class="form-column">
+                <section class="card">
+                    <h2><small>01 / TUS FINANZAS</small>Datos financieros</h2>
+
+                    <label for="txtIngresos">Ingresos:</label>
+                    <div class="input-wrap">
+                        <span>$</span>
+                        <input type="text" id="txtIngresos" inputmode="decimal" placeholder="0,00">
+                    </div>
+
+                    <label for="txtEgresos">Egresos:</label>
+                    <div class="input-wrap">
+                        <span>$</span>
+                        <input type="text" id="txtEgresos" inputmode="decimal" placeholder="0,00">
+                    </div>
+
+                    <div class="financial-results">
+                        <p>Disponible <span id="lblDisponibleValor"></span></p>
+                        <p>Capacidad de pago mensual <span id="lblCapacidadValor"></span></p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2><small>02 / TU SOLICITUD</small>Solicitud de crédito</h2>
+
+                    <label for="txtMonto">Monto:</label>
+                    <div class="input-wrap">
+                        <span>$</span>
+                        <input type="text" id="txtMonto" inputmode="decimal" placeholder="0,00">
+                    </div>
+
+                    <label for="txtPlazo">Plazo en años:</label>
+                    <div class="input-wrap">
+                        <input type="text" id="txtPlazo" inputmode="numeric" placeholder="Ej. 5">
+                        <span>años</span>
+                    </div>
+
+                    <label for="txtTasaInteres">Tasa de interés:</label>
+                    <div class="input-wrap">
+                        <input type="text" id="txtTasaInteres" inputmode="decimal" placeholder="Ej. 12">
+                        <span>%</span>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="button" onclick="calcular()">
+                            Calcular crédito <span aria-hidden="true">→</span>
+                        </button>
+                        <button type="button" id="btnReiniciar">Reiniciar</button>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="summary card">
+                <small>RESULTADO DE LA SIMULACIÓN</small>
+                <h2>Resumen de tu crédito</h2>
+                <p class="hint">Completa tus datos para conocer el valor estimado.</p>
+
+                <p class="monthly">
+                    Cuota mensual estimada
+                    <span id="lblCuotaValor"></span>
+                </p>
+
+                <div class="detail">
+                    <p>Interés a pagar <span id="lblInteresValor"></span></p>
+                    <p>Total préstamo <span id="lblTotalValor"></span></p>
+                </div>
+
+                <p class="status">
+                    Estado de crédito
+                    <span id="spnEstadoCredito">ANALIZANDO...</span>
+                </p>
+
+                <p class="note">
+                    Esta simulación es referencial y no representa una aprobación de crédito.
+                </p>
+            </aside>
+        </main>
+
+        <footer>Simulador de crédito · Propuesta visual</footer>
+    </div>
 </body>
 </html>
