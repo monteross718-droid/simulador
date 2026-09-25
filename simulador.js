@@ -18,4 +18,8 @@ let  plazoAnios = parseInt(document.getElementById("txtTasaInteres").value);
 let valorInteres = calcularInteresSimple(monto,tasa,plazoAnios);
 document.getElementById("lblInteresValor").innerText = valorInteres;
 
+let TotalPagar = calcularTotalPagar(monto, valorInteres);
+document.getElementById("lblTotalValor").innerText = TotalPagar;
+
+
 }

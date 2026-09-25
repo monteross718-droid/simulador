@@ -4,7 +4,7 @@ let ingresos;
 let egresos;
 let valorDisponible;
 let valorInteres;
-
+let TotalPagar;
 
 function calcularDisponible(ingresos, egresos){
     valorDisponible = Math.round((ingresos - egresos)*100) / 100 ;
@@ -26,4 +26,9 @@ function calcularInteresSimple(monto,tasa,plazoAnios){
    
     return valorInteres = (plazoAnios * monto * (tasa) /100 );
 
+}
+
+function calcularTotalPagar(monto, valorInteres){
+    
+    return TotalPagar = monto + valorInteres + 100;
 }
